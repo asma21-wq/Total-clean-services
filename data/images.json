@@ -1,0 +1,151 @@
+{
+  "site": {
+    "name": "Total Clean Services",
+    "description": "Nettoyage professionnel à Strasbourg"
+  },
+  "hero": {
+    "background": {
+      "src": "images/hero/hero-bg-ia.png",
+      "alt": "Nettoyage professionnel à Strasbourg - Total Clean Services",
+      "title": "Hero background"
+    },
+    "logo": {
+      "src": "images/hero/logo.png",
+      "alt": "Total Clean Services Logo",
+      "title": "Logo"
+    }
+  },
+  "services": {
+    "professional": {
+      "src": "images/services/nettoyage-professionnel.jpg",
+      "alt": "Nettoyage professionnel - fin de chantier, logements, bureaux",
+      "title": "Nettoyage professionnel",
+      "category": "nettoyage-professionnel"
+    },
+    "automobile": {
+      "src": "images/services/nettoyage-automobile-ia.png",
+      "alt": "Nettoyage intérieur automobile - vapeur, désinfection",
+      "title": "Nettoyage automobile",
+      "category": "nettoyage-automobile"
+    },
+    "trash": {
+      "src": "images/services/nettoyage-poubelles-ia.png",
+      "alt": "Nettoyage et désinfection de poubelles",
+      "title": "Nettoyage de poubelles",
+      "category": "nettoyage-poubelles"
+    }
+  },
+  "beforeAfter": [
+    {
+      "id": "professionnel-1",
+      "category": "nettoyage-professionnel",
+      "before": {
+        "src": "images/before-after/nettoyage-professionnel-avant-1.png",
+        "alt": "Avant : Salon sale et poussiéreux après chantier"
+      },
+      "after": {
+        "src": "images/before-after/nettoyage-professionnel-apres-1.png",
+        "alt": "Après : Salon impeccable et étincelant"
+      },
+      "title": "Nettoyage fin de chantier - Appartement",
+      "description": "Transformation complète d'un salon après travaux de rénovation"
+    },
+    {
+      "id": "automobile-1",
+      "category": "nettoyage-automobile",
+      "before": {
+        "src": "images/before-after/nettoyage-automobile-avant-2.png",
+        "alt": "Avant : Intérieur voiture sale avec taches"
+      },
+      "after": {
+        "src": "images/before-after/nettoyage-automobile-apres-2.png",
+        "alt": "Après : Intérieur voiture impeccable et désinfecté"
+      },
+      "title": "Nettoyage automobile - Pack Premium",
+      "description": "Nettoyage intérieur complet avec vapeur et désinfection"
+    },
+    {
+      "id": "poubelles-1",
+      "category": "nettoyage-poubelles",
+      "before": {
+        "src": "images/before-after/nettoyage-poubelles-avant-3.png",
+        "alt": "Avant : Poubelle sale et dégoutante"
+      },
+      "after": {
+        "src": "images/before-after/nettoyage-poubelles-apres-3.png",
+        "alt": "Après : Poubelle brillante et désinfectée"
+      },
+      "title": "Nettoyage de poubelles - Résultat professionnel",
+      "description": "Nettoyage complet et désinfection antibactérienne"
+    }
+    ,
+    {
+      "id": "trash-1",
+      "category": "nettoyage-poubelles",
+      "before": {
+        "src": "images/before-after/trash-before-1.jpg",
+        "alt": "Avant : poubelle sale et encrassée"
+      },
+      "after": {
+        "src": "images/before-after/trash-after-1.jpg",
+        "alt": "Après : poubelle nettoyée et désinfectée"
+      },
+      "title": "Nettoyage de poubelles",
+      "description": "Désinfection et élimination des odeurs"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "testi-1",
+      "name": "Marie Dupont",
+      "location": "Strasbourg",
+      "image": "images/testimonials/marie.jpg",
+      "rating": 5,
+      "text": "Travail impeccable ! Très professionnel et rapide. Je recommande vivement.",
+      "service": "Nettoyage fin de chantier",
+      "date": "2025-12-15"
+    },
+    {
+      "id": "testi-2",
+      "name": "Jean Bernard",
+      "location": "Strasbourg",
+      "image": "images/testimonials/jean.jpg",
+      "rating": 5,
+      "text": "Mon intérieur de voiture est comme neuf ! Excellent service.",
+      "service": "Nettoyage automobile",
+      "date": "2025-12-10"
+    },
+    {
+      "id": "testi-3",
+      "name": "Sophie Martin",
+      "location": "Strasbourg",
+      "image": "images/testimonials/sophie.jpg",
+      "rating": 5,
+      "text": "Service régulier pour mes poubelles. Très satisfaite de la propreté et de l'hygiène.",
+      "service": "Nettoyage poubelles",
+      "date": "2025-12-05"
+    }
+  ],
+  "icons": {
+    "whatsapp": {
+      "src": "images/icons/whatsapp.png",
+      "alt": "WhatsApp",
+      "title": "Contactez-nous sur WhatsApp"
+    },
+    "phone": {
+      "src": "images/icons/phone.png",
+      "alt": "Téléphone",
+      "title": "Appelez-nous"
+    },
+    "check": {
+      "src": "images/icons/check.svg",
+      "alt": "Checkmark",
+      "title": "Service inclus"
+    }
+  },
+  "social": {
+    "facebook": "https://facebook.com/totalcleanservices",
+    "instagram": "https://instagram.com/totalcleanservices",
+    "google_business": "https://www.google.com/business"
+  }
+}
