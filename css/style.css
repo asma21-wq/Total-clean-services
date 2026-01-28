@@ -96,6 +96,34 @@ nav ul li a:hover:after {
     width: 100%;
 }
 
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: #ffd700;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Hero section */
 .hero {
     background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(44,44,44,0.5) 100%), url('../images/hero/hero-bg-ia.png') center/cover no-repeat;
@@ -720,6 +748,100 @@ footer a:hover {
     text-align: center;
     font-size: 0.95rem;
     color: #666;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 0;
+    }
+    
+    nav {
+        padding: 0 1rem;
+        position: relative;
+    }
+    
+    .logo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .hamburger {
+        display: flex !important;
+        z-index: 1001;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+    
+    nav ul.active {
+        max-height: 400px;
+    }
+    
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,215,0,0.1);
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 1.2rem 2rem;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        background: rgba(255,215,0,0.1);
+        padding-left: 2.5rem;
+    }
+    
+    nav ul li a:after {
+        display: none;
+    }
+    
+    .hero {
+        padding: 4rem 1.5rem 3rem;
+        min-height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .service-cards, .price-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .before-after-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 /* CTA */
