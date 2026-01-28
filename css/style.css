@@ -416,9 +416,12 @@ section {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1.5rem;
-
     position: relative;
     overflow: hidden;
+}
+
+.card img:nth-of-type(n+2) {
+    display: none;
 }
 
 .card::before {
