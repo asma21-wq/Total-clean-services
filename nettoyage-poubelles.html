@@ -22,7 +22,12 @@
             <div class="logo">
                 <h2>Total Clean Services</h2>
             </div>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="nettoyage-professionnel.html">Nettoyage professionnel</a></li>
                 <li><a href="nettoyage-automobile.html">Nettoyage automobile</a></li>
@@ -128,5 +133,23 @@
     </a>
 
     <script src="js/script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
