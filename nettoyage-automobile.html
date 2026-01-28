@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nettoyage intérieur automobile à Strasbourg | Total Clean Services</title>
     <meta name="description" content="Nettoyage intérieur automobile à Strasbourg : vapeur, aspiration, désinfection. Packs Essentiel, Premium, Prestige. À domicile ou sur rendez-vous.">
-    <meta name="keywords" content=\"nettoyage intérieur voiture Strasbourg, nettoyage auto vapeur Strasbourg\">
-    <link rel=\"stylesheet\" href=\"css/style.css\">
+    <meta name="keywords" content="nettoyage intérieur voiture Strasbourg, nettoyage auto vapeur Strasbourg">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Google Analytics -->
     <script async src=\"https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID\"></script>
     <script>
@@ -113,9 +113,28 @@
     </footer>
 
     <a href="https://wa.me/330783072602?text=Bonjour,%20je%20souhaite%20un%20devis%20gratuit" class="whatsapp-float" target="_blank">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp">
+        💬
     </a>
 
     <script src="js/script.js"></script>
+    <script src="js/image-manager.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
