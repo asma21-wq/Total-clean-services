@@ -79,14 +79,15 @@ nav ul li a {
     color: #fff;
     font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
+    padding-bottom: 5px;
 }
 
 nav ul li a:after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -100,6 +101,17 @@ nav ul li a:hover {
 
 nav ul li a:hover:after {
     width: 100%;
+}
+
+/* Active page indicator */
+nav ul li a.active {
+    color: #F5C400;
+    font-weight: 700;
+}
+
+nav ul li a.active:after {
+    width: 100%;
+    bottom: 0;
 }
 
 /* Hamburger menu */
@@ -249,6 +261,11 @@ nav ul li a:hover:after {
 .nav-devis:hover {
     background-color: #e6c200 !important;
     transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(230,194,0,0.4) !important;
+}
+
+.nav-devis:after {
+    display: none !important;
 }
 
 .whatsapp {
@@ -271,7 +288,20 @@ section {
     margin: 0 auto;
 }
 
-.why-us {
+/* Full width sections */
+section.hero,
+section.intro,
+section.how-it-works,
+section.before-after,
+section.testimonials,
+section.devis-section,
+section.zone,
+.pricing,
+.pricing-overview {
+    max-width: 100%;
+    margin: 0;
+    padding: 4rem 2rem;
+}.why-us {
     background-color: #F7F7F7;
 }
 
@@ -315,7 +345,10 @@ section {
 
 /* Services */
 .services {
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #fff 0%, #F7F7F7 100%);
+    padding: 4rem 2rem;
+    margin: 0;
+    max-width: 100%;
 }
 
 .service-cards {
@@ -453,7 +486,7 @@ section {
 .big-price {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #ffd700;
+    color: #F5C400;
     margin-bottom: 1.5rem;
 }
 
@@ -489,9 +522,9 @@ section {
 
 /* Premium card styling */
 .card.premium {
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.2);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #F5C400 0%, #FFD200 100%);
+    box-shadow: 0 6px 25px rgba(245,196,0,0.3);
+    transform: scale(1.02);
     min-height: 400px;
 }
 
@@ -502,14 +535,14 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 100%);
     pointer-events: none;
     border-radius: 16px;
 }
 
 .card.premium:hover {
-    transform: scale(1.08) translateY(-8px);
-    box-shadow: 0 10px 35px rgba(255, 215, 0, 0.3);
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 10px 35px rgba(245,196,0,0.4);
 }
 
 .card h3 {
@@ -528,7 +561,7 @@ section {
 .card p {
     font-size: 1.9rem;
     font-weight: 700;
-    color: #ffd700;
+    color: #F5C400;
     margin-bottom: 1.2rem;
     position: relative;
     z-index: 1;
@@ -559,7 +592,7 @@ section {
 
 .card li::before {
     content: '•';
-    color: #ffd700;
+    color: #F5C400;
     font-weight: 700;
     font-size: 1.2rem;
     position: absolute;
@@ -722,7 +755,7 @@ footer a:hover {
 }
 
 .price-cards .card {
-    border-top: 4px solid #ffd700;
+    border-top: 4px solid #F5C400;
 }
 
 .price-cards .card ul {
@@ -785,10 +818,10 @@ footer a:hover {
 }
 
 .services-detail li {
-    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    background: linear-gradient(135deg, #F7F7F7 0%, #fff 100%);
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid #ffd700;
+    border-left: 4px solid #F5C400;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
 }
@@ -808,19 +841,19 @@ footer a:hover {
 }
 
 .assurance li {
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #fff 0%, #F7F7F7 100%);
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
-    border: 2px solid #ffd700;
+    border: 2px solid #F5C400;
     transition: all 0.3s ease;
     font-weight: 600;
-    color: #2c3e50;
+    color: #333;
 }
 
 .assurance li:hover {
     background: linear-gradient(135deg, #fffef0 0%, #fff 100%);
-    box-shadow: 0 6px 20px rgba(255,215,0,0.2);
+    box-shadow: 0 6px 20px rgba(245,196,0,0.3);
     transform: scale(1.05);
 }
 
@@ -1168,7 +1201,7 @@ footer a:hover {
     
     nav ul li {
         width: 100%;
-        border-bottom: 1px solid rgba(255,215,0,0.1);
+        border-bottom: 1px solid rgba(245,196,0,0.1);
     }
     
     nav ul li a {
@@ -1179,7 +1212,7 @@ footer a:hover {
     }
     
     nav ul li a:hover {
-        background: rgba(255,215,0,0.1);
+        background: rgba(245,196,0,0.1);
         padding-left: 2.5rem;
     }
     
