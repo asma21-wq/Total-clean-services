@@ -544,7 +544,7 @@ section.zone,
 
 /* Premium card styling */
 .card.premium {
-    background: linear-gradient(135deg, #F5C400 0%, #FFD200 100%);
+    background: #F5C400;
     box-shadow: 0 6px 25px rgba(245,196,0,0.3);
     transform: scale(1.02);
     min-height: 400px;
