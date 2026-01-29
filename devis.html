@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis gratuit | Total Clean Services à Strasbourg</title>
+    <meta name="description" content="Demandez votre devis gratuit pour le nettoyage professionnel à Strasbourg. Réponse rapide, sans engagement, devis transparent.">
+    <meta name="keywords" content="devis nettoyage Strasbourg, devis gratuit, nettoyage professionnel devis">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asma21-wq.github.io/Total-clean-services/devis.html">
+    <meta property="og:title" content="Devis gratuit | Total Clean Services">
+    <meta property="og:description" content="Demandez votre devis gratuit pour le nettoyage professionnel à Strasbourg.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://asma21-wq.github.io/Total-clean-services/devis.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Total Clean Services",
+      "@id": "https://asma21-wq.github.io/Total-clean-services/",
+      "url": "https://asma21-wq.github.io/Total-clean-services/",
+      "telephone": "+33783072602",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Strasbourg",
+        "addressRegion": "Grand Est",
+        "addressCountry": "FR"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>Total Clean Services</h2>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="nettoyage-professionnel.html">Nettoyage professionnel</a></li>
+                <li><a href="nettoyage-automobile.html">Nettoyage automobile</a></li>
+                <li><a href="nettoyage-poubelles.html">Nettoyage de poubelles</a></li>
+                <li><a href="devis.html" class="nav-devis">📋 Devis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-devis">
+            <h1>Devis gratuit & sans engagement</h1>
+            <p class="hero-subtitle">Réponse rapide • Transparent • Professionnel</p>
+        </section>
+
+        <section class="devis-section">
+            <div class="devis-container">
+                <div class="devis-form-wrapper">
+                    <h2>Remplissez notre formulaire</h2>
+                    <p class="form-subtitle">Nous vous répondrons dans les 24h</p>
+                    
+                    <form id="devisForm" class="devis-form">
+                        <div class="form-group">
+                            <label for="name">Votre nom *</label>
+                            <input type="text" id="name" name="name" required placeholder="Prénom et nom">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="07 XX XX XX XX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Type de service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Sélectionnez un service --</option>
+                                <option value="nettoyage-logement">Nettoyage logement & fin de chantier</option>
+                                <option value="nettoyage-automobile">Nettoyage automobile</option>
+                                <option value="nettoyage-poubelles">Nettoyage de poubelles</option>
+                                <option value="autre">Autre service</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="surface">Surface approximative (m²)</label>
+                            <input type="number" id="surface" name="surface" placeholder="Ex: 100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Description du travail *</label>
+                            <textarea id="message" name="message" required placeholder="Décrivez le nettoyage que vous souhaitez..." rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Délai d'intervention souhaité</label>
+                            <select id="urgency" name="urgency">
+                                <option value="">-- Sélectionnez un délai --</option>
+                                <option value="urgent">Urgent (cette semaine)</option>
+                                <option value="bientot">Bientôt (2-3 semaines)</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>J'accepte les conditions d'utilisation</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Demander mon devis gratuit 🟡</button>
+                    </form>
+
+                    <div id="successMessage" class="success-message" style="display:none;">
+                        <h3>✅ Merci !</h3>
+                        <p>Votre demande de devis a été envoyée avec succès.</p>
+                        <p>Nous vous contactons dans les 24 heures.</p>
+                    </div>
+                </div>
+
+                <div class="devis-info">
+                    <h3>Ou contactez-nous directement</h3>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Appel téléphonique</h4>
+                            <p><a href="tel:+330783072602">07 83 07 26 02</a></p>
+                            <small>Lun-Sam 8h-18h</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/330783072602?text=Bonjour,%20je%20souhaite%20un%20devis%20gratuit" target="_blank">Envoyer un message</a></p>
+                            <small>Réponse rapide 24/7</small>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>💡 Pourquoi nous ?</h4>
+                        <ul>
+                            <li>✅ Devis gratuit et transparent</li>
+                            <li>✅ Réponse sous 24h</li>
+                            <li>✅ Matériel professionnel</li>
+                            <li>✅ Intervention rapide</li>
+                            <li>✅ Satisfaction garantie</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-area">
+                        <h4>📍 Zone d'intervention</h4>
+                        <p>Strasbourg et alentours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>Avis clients</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Travail rapide et très propre, je recommande. L'équipe est professionnelle et ponctuelle."</p>
+                    <p class="testimonial-author">— Marie D., Strasbourg</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Nettoyage après travaux impeccable. Merci d'avoir pris soin des détails !"</p>
+                    <p class="testimonial-author">— Jean L., Strasbourg</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Service excellent, prix honnête. Je les appelle pour tous mes besoins de nettoyage."</p>
+                    <p class="testimonial-author">— Sophie M., Strasbourg</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Total Clean Services. Tous droits réservés.</p>
+        <p>Contact : <a href="tel:+330783072602">07 83 07 26 02</a> | Strasbourg, Grand Est</p>
+    </footer>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/330783072602?text=Bonjour,%20je%20souhaite%20un%20devis%20gratuit" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <!-- Phone floating button -->
+    <a href="tel:+330783072602" class="phone-float">
+        📞
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form submission
+        document.getElementById('devisForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                service: formData.get('service'),
+                surface: formData.get('surface'),
+                message: formData.get('message'),
+                urgency: formData.get('urgency'),
+                date: new Date().toLocaleString('fr-FR')
+            };
+            
+            // Send to WhatsApp
+            const whatsappMessage = `Nouvelle demande de devis:\n\nNom: ${data.name}\nTéléphone: ${data.phone}\nEmail: ${data.email}\nService: ${data.service}\nSurface: ${data.surface}m²\nMessage: ${data.message}\nUrgence: ${data.urgency}`;
+            
+            const whatsappUrl = `https://wa.me/330783072602?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            document.getElementById('devisForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                document.getElementById('devisForm').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+                document.getElementById('devisForm').reset();
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
