@@ -17,7 +17,7 @@
   },
   "services": {
     "professional": {
-      "src": "images/services/nettoyage-professionnel.jpg",
+      "src": "images/services/nettoyage-professionnel-ia.png",
       "alt": "Nettoyage professionnel - fin de chantier, logements, bureaux",
       "title": "Nettoyage professionnel",
       "category": "nettoyage-professionnel"
@@ -77,21 +77,6 @@
       },
       "title": "Nettoyage de poubelles - Résultat professionnel",
       "description": "Nettoyage complet et désinfection antibactérienne"
-    }
-    ,
-    {
-      "id": "trash-1",
-      "category": "nettoyage-poubelles",
-      "before": {
-        "src": "images/before-after/trash-before-1.jpg",
-        "alt": "Avant : poubelle sale et encrassée"
-      },
-      "after": {
-        "src": "images/before-after/trash-after-1.jpg",
-        "alt": "Après : poubelle nettoyée et désinfectée"
-      },
-      "title": "Nettoyage de poubelles",
-      "description": "Désinfection et élimination des odeurs"
     }
   ],
   "testimonials": [

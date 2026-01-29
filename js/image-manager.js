@@ -6,7 +6,7 @@
 class ImageManager {
     constructor() {
         this.imagesData = null;
-        this.init();
+        this.ready = this.init();
     }
 
     /**
@@ -17,6 +17,7 @@ class ImageManager {
             const response = await fetch('data/images.json');
             this.imagesData = await response.json();
             console.log('✅ Images chargées depuis data/images.json');
+            window.dispatchEvent(new Event('imagesDataLoaded'));
         } catch (error) {
             console.error('❌ Erreur lors du chargement des images:', error);
         }
@@ -123,13 +124,18 @@ window.imageManager = imageManager;
  * Charger automatiquement les images au chargement du DOM
  */
 document.addEventListener('DOMContentLoaded', function() {
-    // Attendre que les images soient chargées
-    setTimeout(() => {
+    const runLoaders = () => {
         loadHeroImages();
         loadServiceImages();
         loadBeforeAfterGallery();
         loadTestimonials();
-    }, 100);
+    };
+
+    if (imageManager.imagesData) {
+        runLoaders();
+    } else {
+        window.addEventListener('imagesDataLoaded', runLoaders, { once: true });
+    }
 });
 
 /**
