@@ -46,7 +46,7 @@ a {
 header {
     background: linear-gradient(135deg, #0F0F0F 0%, #1a1a1a 100%);
     color: #fff;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -70,22 +70,25 @@ nav {
 .logo-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0;
     text-decoration: none;
 }
 
-.logo-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-
-.logo-text {
+.logo-link h2 {
     color: #F5C400;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     letter-spacing: -0.5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
+    margin: 0;
+}
+
+.logo-img {
+    display: none;
+}
+
+.logo-text {
+    display: none;
 }
 
 nav ul {
