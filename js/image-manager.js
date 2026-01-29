@@ -146,7 +146,7 @@ function loadHeroImages() {
     if (heroBg && imageManager.imagesData) {
         const bgImage = imageManager.getImage('hero.background');
         if (bgImage) {
-            heroBg.style.backgroundImage = `url('${bgImage.src}')`;
+            heroBg.style.backgroundImage = `linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(15,15,15,0.5) 100%), url('${bgImage.src}')`;
         }
     }
 }
