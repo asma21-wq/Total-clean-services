@@ -75,10 +75,11 @@ nav {
 }
 
 .logo-img {
-    height: 60px;
+    height: 70px;
     width: auto;
     object-fit: contain;
     transition: all 0.3s ease;
+    display: block;
 }
 
 .logo-link:hover .logo-img {
@@ -93,10 +94,6 @@ nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     margin: 0;
-}
-
-.logo-img {
-    display: none;
 }
 
 .logo-text {
