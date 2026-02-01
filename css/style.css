@@ -1002,20 +1002,6 @@ footer a:hover {
     box-shadow: 0 12px 35px rgba(255,215,0,0.2);
 }
 
-.premium::after {
-    content: '⭐ LE PLUS VENDU';
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #25d366;
-    color: #fff;
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
 /* Services detail */
 .services-detail ul {
     list-style: none;
