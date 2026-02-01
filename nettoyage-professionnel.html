@@ -14,6 +14,10 @@
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- jsPDF pour génération PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
@@ -191,6 +195,39 @@
 
         </section>
 
+        <!-- Simulateur crédit d'impôt -->
+        <section class="credit-impot">
+            <h3>💰 Éligible au crédit d'impôt 50 % !</h3>
+            <p>Toutes nos prestations de ménage à domicile sont reconnues comme <strong>services à la personne</strong>. Vous pouvez récupérer 50 % du montant payé sur vos impôts (plafonné à 12 000 €/an). Paiement possible via CESU.</p>
+
+            <!-- Formulaire simulateur -->
+            <form id="simulateur-credit">
+                <label for="heures">Heures par mois :</label>
+                <input type="number" id="heures" min="1" value="4">
+
+                <label for="tarif">Tarif horaire (€) :</label>
+                <input type="number" id="tarif" min="10" value="20">
+
+                <label for="personnes">Personnes à charge :</label>
+                <input type="number" id="personnes" min="0" value="0">
+
+                <button type="button" onclick="calculCredit()">Simuler le crédit d'impôt</button>
+            </form>
+
+            <!-- Résultats simulateur -->
+            <div id="resultat">
+                <p>Montant total : <span id="montantTotal">0</span> €</p>
+                <p>Crédit d'impôt estimé : <span id="creditImpot">0</span> €</p>
+                <p>Montant réel à payer : <span id="montantReel">0</span> €</p>
+            </div>
+
+            <!-- Boutons action -->
+            <div class="action-buttons">
+                <a href="https://www.cesu.urssaf.fr/" id="cesu" target="_blank" rel="noopener">Payer via CESU</a>
+                <button onclick="genererFacturePDF()">Télécharger facture PDF</button>
+            </div>
+        </section>
+
         <section class="cta">
             <a href="https://wa.me/330783072602?text=Bonjour,%20je%20souhaite%20un%20devis%20pour%20nettoyage%20professionnel" class="btn whatsapp" target="_blank">📲 Devis gratuit sur WhatsApp</a>
         </section>
@@ -240,6 +277,62 @@
                 navMenu.classList.remove('active');
             });
         });
+    </script>
+    
+    <!-- Scripts simulateur crédit d'impôt -->
+    <script>
+    function calculCredit() {
+        let heures = parseFloat(document.getElementById('heures').value);
+        let tarif = parseFloat(document.getElementById('tarif').value);
+        let personnes = parseInt(document.getElementById('personnes').value);
+
+        let montantTotal = heures * tarif;
+        let majoration = personnes * 1500;
+        let creditImpot = (montantTotal * 0.5) + majoration;
+
+        if (creditImpot > 12000) creditImpot = 12000;
+
+        let montantReel = montantTotal - (montantTotal * 0.5);
+
+        document.getElementById('montantTotal').innerText = montantTotal.toFixed(2);
+        document.getElementById('creditImpot').innerText = creditImpot.toFixed(2);
+        document.getElementById('montantReel').innerText = montantReel.toFixed(2);
+    }
+
+    // Fonction pour générer la facture PDF
+    function genererFacturePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        let heures = document.getElementById('heures').value;
+        let tarif = document.getElementById('tarif').value;
+        let personnes = document.getElementById('personnes').value;
+        let total = document.getElementById('montantTotal').innerText;
+        let credit = document.getElementById('creditImpot').innerText;
+
+        doc.setFontSize(16);
+        doc.text("Facture - Service de menage a domicile", 20, 20);
+        doc.setFontSize(12);
+        doc.text("Entreprise : Total Clean Services", 20, 30);
+        doc.text("Telephone : 07 83 07 26 02", 20, 36);
+        doc.text("Adresse : Strasbourg, Grand Est", 20, 42);
+        doc.text("--------------------------------------------------", 20, 48);
+        doc.text("PRESTATION DE SERVICE", 20, 54);
+        doc.text("--------------------------------------------------", 20, 60);
+        doc.text(`Prestation : ${heures} heures/mois a ${tarif} EUR/h`, 20, 68);
+        doc.text(`Personnes a charge : ${personnes}`, 20, 74);
+        doc.text("--------------------------------------------------", 20, 80);
+        doc.text(`Montant total : ${total} EUR`, 20, 88);
+        doc.text(`Credit d'impot estime : ${credit} EUR`, 20, 94);
+        doc.text("--------------------------------------------------", 20, 100);
+        doc.setFontSize(10);
+        doc.text("Mention legale :", 20, 110);
+        doc.text("Service a la personne - eligible au credit d'impot 50%", 20, 116);
+        doc.text("(article 199 sexdecies du CGI)", 20, 122);
+        doc.text("Cette facture ne constitue pas une attestation fiscale officielle.", 20, 128);
+
+        doc.save("facture_menage_domicile.pdf");
+    }
     </script>
 </body>
 </html>

@@ -683,6 +683,162 @@ section.zone,
     color: #555;
 }
 
+/* Simulateur crédit d'impôt */
+.credit-impot {
+    background: #F0FFF0;
+    border: 2px solid #28A745;
+    padding: 30px;
+    font-family: 'Roboto', 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+}
+
+.credit-impot h3 {
+    color: #28A745;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.credit-impot p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.credit-impot form {
+    background: #ffffff;
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.credit-impot form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+.credit-impot form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.credit-impot form input:focus {
+    outline: none;
+    border-color: #28A745;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
+}
+
+.credit-impot form button {
+    margin-top: 20px;
+    background: #FF9900;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.credit-impot form button:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 153, 0, 0.3);
+}
+
+#resultat {
+    margin-top: 20px;
+    background: #E8F5E9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #28A745;
+}
+
+#resultat p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+#resultat span {
+    font-weight: 700;
+    color: #28A745;
+    font-size: 18px;
+}
+
+.credit-impot .action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.credit-impot .action-buttons a,
+.credit-impot .action-buttons button {
+    flex: 1;
+    min-width: 200px;
+    margin: 0;
+    background: #28A745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.credit-impot .action-buttons a:hover,
+.credit-impot .action-buttons button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .credit-impot {
+        padding: 20px;
+        margin: 30px 15px;
+    }
+
+    .credit-impot h3 {
+        font-size: 1.3rem;
+    }
+
+    .credit-impot .action-buttons {
+        flex-direction: column;
+    }
+
+    .credit-impot .action-buttons a,
+    .credit-impot .action-buttons button {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .credit-impot form button {
+        padding: 14px 20px;
+    }
+}
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, #0F0F0F 0%, #1a1a1a 100%);
